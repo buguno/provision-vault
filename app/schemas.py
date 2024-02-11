@@ -13,7 +13,6 @@ class UserSchema(BaseModel):
 class UserPublic(BaseModel):
     id: int
     username: str
-    password: str
 
 
 class UserDB(UserSchema):
