@@ -43,8 +43,8 @@ extend-exclude = '(migrations/)'
 [tool.taskipy.tasks]
 lint = 'ruff . && blue --check . --diff && isort --check . --diff'
 format = 'blue .  && isort .'
-run = 'uvicorn fast_zero.app:app --reload'
+run = 'uvicorn app.app:app --reload'
 pre_test = 'task lint'
-test = 'pytest -s -x --cov=fast_zero -vv'
+test = 'pytest -s -x --cov=app -vv'
 post_test = 'coverage html'
 
