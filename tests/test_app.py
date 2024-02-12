@@ -22,3 +22,17 @@ def test_should_return_new_user_created_and_status_code_201(client):
         'id': 1,
         'username': 'reece',
     }
+
+
+def test_should_return_all_users(client):
+    response = client.get('/users/')
+
+    assert response.status_code == HTTPStatus.OK
+    assert response.json() == {
+        'users': [
+            {
+                'id': 1,
+                'username': 'reece',
+            }
+        ]
+    }
