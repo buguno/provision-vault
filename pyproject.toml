@@ -12,7 +12,7 @@ fastapi = "^0.115.5"
 uvicorn = "^0.32.1"
 
 [tool.poetry.group.dev.dependencies]
-pytest = "^8.3.3"
+pytest = "^8.3.4"
 pytest-cov = "^6.0.0"
 taskipy = "^1.14.1"
 blue = "^0.9.1"
